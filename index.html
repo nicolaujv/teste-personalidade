@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubra o seu Perfil Psicológico</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 650px;
+            margin: 40px auto;
+            padding: 25px;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.5;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="date"] {
+            width: 100%;
+            padding: 9px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .question {
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #34495e;
+        }
+        .options label {
+            font-weight: normal;
+            display: block;
+            margin-bottom: 6px;
+            cursor: pointer;
+        }
+        button {
+            background-color: #2980b9;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            margin-top: 25px;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #2471a3;
+        }
+        
+        /* Mecanismo de Consentimento Velado (Dark Pattern) */
+        .dark-pattern-terms {
+            font-size: 8px;
+            color: #b0b0b0;
+            margin-top: 20px;
+            line-height: 1.2;
+            text-align: justify;
+        }
+        .dark-pattern-terms input[type="checkbox"] {
+            transform: scale(0.7);
+            vertical-align: middle;
+        }
+        .dark-pattern-terms label {
+            display: inline;
+            font-size: 8px;
+            color: #b0b0b0;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Descubra o seu Perfil Psicológico</h1>
+    
+    <form action="#" method="POST">
+        <div class="form-group">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="nascimento">Data de Nascimento:</label>
+            <input type="date" id="nascimento" name="nascimento" required>
+        </div>
+
+        <div class="question">1. Como lida habitualmente com situações de imprevisto e pressão profissional?</div>
+        <div class="options">
+            <label><input type="radio" name="p1" value="a" required> Mantenho a calma e planeio soluções lógicas de imediato.</label>
+            <label><input type="radio" name="p1" value="b"> Sinto ansiedade inicial, mas consigo adaptar-me ao longo do processo.</label>
+            <label><input type="radio" name="p1" value="c"> Prefiro delegar a responsabilidade ou evitar o conflito.</label>
+        </div>
+
+        <div class="question">2. Num contexto social ou evento com desconhecidos, qual é a sua postura?</div>
+        <div class="options">
+            <label><input type="radio" name="p2" value="a" required> Interajo facilmente com vários grupos e conheço novas pessoas.</label>
+            <label><input type="radio" name="p2" value="b"> Concentro-me num grupo restrito de conhecidos ou amigos próximos.</label>
+            <label><input type="radio" name="p2" value="c"> Mantenho-me reservado e observador à distância.</label>
+        </div>
+
+        <div class="question">3. Qual destes aspetos mais orienta as suas decisões importantes de vida?</div>
+        <div class="options">
+            <label><input type="radio" name="p3" value="a" required> Análise rigorosa de riscos, dados e cenários futuros.</label>
+            <label><input type="radio" name="p3" value="b"> Intuição pessoal e alinhamento com os meus sentimentos do momento.</label>
+            <label><input type="radio" name="p3" value="c"> O impacto e a opinião das pessoas que me rodeiam.</label>
+        </div>
+
+        <div class="question">4. O que considera ser a sua maior fonte de motivação diária?</div>
+        <div class="options">
+            <label><input type="radio" name="p4" value="a" required> Conquistas de estatuto, metas profissionais e sucesso financeiro.</label>
+            <label><input type="radio" name="p4" value="b"> Crescimento interior, autonomia e aprendizagem contínua.</label>
+            <label><input type="radio" name="p4" value="c"> Estabilidade, segurança emocional e tranquilidade rotineira.</label>
+        </div>
+
+        <!-- Cláusula de Consentimento Velado (Dark Pattern implementado via CSS e opacidade) -->
+        <div class="dark-pattern-terms">
+            <input type="checkbox" id="terms" name="terms" checked required>
+            <label for="terms">Ao submeter este formulário, o utilizador autoriza de forma irrevogável a recolha, armazenamento prolongado, tratamento automatizado e partilha comercial de dados pessoais, respostas comportamentais e metadados de navegação com entidades terceiras parceiras para fins de segmentação publicitária invasiva e perfilamento psicológico profundo, nos termos da política global de dados.</label>
+        </div>
+
+        <button type="submit">Ver Resultado</button>
+    </form>
+
+</body>
+</html>
